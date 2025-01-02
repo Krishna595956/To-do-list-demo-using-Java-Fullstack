@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Task Details</title>
+    <!-- Include Bootstrap CSS via CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIq0hpXO1Z9pFtbpbe0p4Pqcq/zYChfKk29g5zTdx96c2ca0vlp" crossorigin="anonymous">
+</head>
+<body class="container mt-5">
+    <h1 class="mb-4">Task Details</h1>
+
+    <!-- Display task details -->
+    <div class="card">
+        <div class="card-body">
+            <p><strong>Title:</strong> <span th:text="${todo.title}"></span></p>
+            <p><strong>Description:</strong> <span th:text="${todo.description}"></span></p>
+            <p><strong>Completed:</strong> <span th:text="${todo.completed} ? 'Yes' : 'No'"></span></p>
+        </div>
+    </div>
+
+    <!-- Button to go back to the list of tasks -->
+    <a href="/todos" class="btn btn-secondary mt-3">Back to List</a>
+
+    <!-- Include Bootstrap JS and dependencies (optional for form validation, etc.) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zytnbV7lD4Uq5j6b4cwFI6A0ht5ow5yfJvjs4j78" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-IQsoLXf2rP7l/7vya9K4v6tguvkt5vvuqHsojdB2JQ2RU2tBBlzjkrfjhzRzc7kg" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0hpXO1Z9pFtbpbe0p4Pqcq/zYChfKk29g5zTdx96c2ca0vlp" crossorigin="anonymous"></script>
+</body>
+</html>
